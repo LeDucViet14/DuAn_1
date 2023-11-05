@@ -1,4 +1,10 @@
 @import url('http://fonts.googleapis.com/css?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --teal: #2ec1ac;
+    --teal_hover:#279e8c;
+}
+
 html{
     font-family: 'Nunito', sans-serif;
     margin: 0;padding: 0;
@@ -19,11 +25,11 @@ body{
 }
 
 .custom-bg{
-    background-color: #2ec1ac;
+    background-color: var(--teal);
 }
 
 .custom-bg:hover{
-    background-color: #279e8c;
+    background-color: var(--teal_hover);
 }
 
 .availability-form{
@@ -32,10 +38,41 @@ body{
     z-index: 2;
 }
 
+/* 
+FACILITIE
+ABOUT
+CONTACT */
+.h-line{
+    width: 150px;
+    margin: 0 auto;
+    height: 1.7px;
+}
+
+.pop:hover{
+    border-top-color:var(--teal) !important;
+    transform: scale(1.03);
+    transition: all 0.3s;
+}
+
+.box{
+    border-top-color: var(--teal_hover) !important ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:575px){
     .availability-form{
         margin-top: 25px;
         padding: 0 35px;
     }
-
 }

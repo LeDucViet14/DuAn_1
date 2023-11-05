@@ -44,3 +44,26 @@ var swiper = new Swiper(".swiper-testimonials", {
         },
     }
   });
+
+  var swiper = new Swiper(".management", {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    breakpionts: {
+        320:{
+            slidesPerView: 1,
+        },
+        640:{
+            slidesPerView: 1,
+        },
+        768:{
+            slidesPerView: 2,
+        },
+        1024:{
+            slidesPerView: 3,
+        },
+    }
+  });
+
