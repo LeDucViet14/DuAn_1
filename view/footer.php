@@ -10,24 +10,31 @@
 
             <div class="col-lg-4 p-4">
                 <h5 class="mb-3">Links</h5>
-                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a><br>
-                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none">Rooms</a><br>
-                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none">Facilities</a><br>
-                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none">Contact Us</a><br>
-                <a href="" class="d-inline-block mb-2 text-dark text-decoration-none">About Us</a><br>
+                <a href="index.php?act=home" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a><br>
+                <a href="index.php?act=rooms" class="d-inline-block mb-2 text-dark text-decoration-none">Rooms</a><br>
+                <a href="index.php?act=facilities" class="d-inline-block mb-2 text-dark text-decoration-none">Facilities</a><br>
+                <a href="index.php?act=contact" class="d-inline-block mb-2 text-dark text-decoration-none">Contact Us</a><br>
+                <a href="index.php?act=about" class="d-inline-block mb-2 text-dark text-decoration-none">About Us</a><br>
             </div>
 
-
-            <div class="col-lg-4 p-4">
-                <h5 class="mb-3">Follow Us</h5>
-                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none"><i
-                        class="fa-brands fa-twitter"></i> Twitter</a><br>
-                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none"><i
-                        class="fa-brands fa-facebook"></i> Facebook</a><br>
-                <a href="#" class="d-inline-block text-dark text-decoration-none"><i class="fa-brands fa-instagram"></i>
-                    Instagram</a><br>
-
-            </div>
+            <?php
+                foreach($contact_home as $contact){
+                    extract($contact);
+                    echo '
+                    <div class="col-lg-4 p-4">
+                        <h5 class="mb-3">Follow Us</h5>
+                        <a href="'.$tw.'" class="d-inline-block mb-2 text-dark text-decoration-none"><i
+                                class="fa-brands fa-twitter"></i> Twitter</a><br>
+                        <a href="'.$fb.'" class="d-inline-block mb-2 text-dark text-decoration-none"><i
+                                class="fa-brands fa-facebook"></i> Facebook</a><br>
+                        <a href="'.$insta.'" class="d-inline-block text-dark text-decoration-none"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a><br>
+    
+                    </div>
+                    ';
+                }
+            ?>
+            
 
         </div>
         <h6 class="text-center bg-dark text-white p-3 m-0">Mr. Viet Code website Booking Hotel</h6>
