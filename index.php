@@ -2,6 +2,7 @@
     include "model/contact.php";
     include "model/about.php";
     include "model/pdo.php";
+    include "model/rooms.php";
     include "global.php";
     include "view/header.php";
     $contact_home = loadContact();
@@ -22,6 +23,11 @@
                 include "view/facilities.php";
                 break;
             case 'rooms':
+                $rooms = loadall_room();
+                foreach($rooms as $room){
+                    $features = loadall_features_room($room['id']);
+                    $facilities = loadall_facilities_room($room['id']);
+                }
                 include "view/rooms.php";
                 break;
 

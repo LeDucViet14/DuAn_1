@@ -63,172 +63,56 @@
                 </div>
 
                 <div class="col-lg-9 col-md-12 px-4">
-                    
                     <div class="card mb-4 shadow border-0" >
                         <div class="row g-0 p-3 align-items-center">
                             <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
                                 <img src="images/rooms/1.jpg" class="img-fluid rounded" alt="room">
                             </div>
                             <div class="col-md-5 px-lg-3 px-md-3 px-0">
-                                <h5 class="mb-3">Simple Room name</h5>
+                                <?php foreach($rooms as $room){
+                                    echo '<h5 class="mb-3">'.$room['name'].'</h5>';
+                                } ?>
                                 <div class="features mb-3">
                                     <h6 class="mb-1">Features</h6>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        2 rooms
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        1 Batroom
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        2 Balcony
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        2 sofa
-                                    </span>
+                                    <?php
+                                        foreach($features as $feature){
+                                            echo '<span class="badge rounded-pill text-bg-light text-dark text-wrap">
+                                                    '.$feature['name'].'
+                                                </span>';
+                                        }
+                                    ?>
                                 </div>
                                 <div class="facilities mb-3">
                                     <h6 class="mb-1">Facilities</h6>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        Wifi
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        Television
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        AC
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        Room heater
-                                    </span>
+                                    <?php
+                                        foreach($facilities as $facility){
+                                            echo '<span class="badge rounded-pill text-bg-light text-dark text-wrap">
+                                                    '.$facility['name'].'
+                                                </span>';
+                                        }
+                                    ?>
+                                    
+                                    
                                 </div>
                                 <div class="guests">
                                     <h6 class="mb-1">Guests</h6>
                                     <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        4 Children
+                                        <?php echo $room['children'] ?> Children
                                     </span>
                                     <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        5 Adults
+                                        <?php echo $room['adult'] ?> Adults
                                     </span>
                                 </div>
                             </div>
                             <div class="col-md-2 text-center mt-lg-0 mt-md-0 mt-4">
-                                <h6 class="mb-4">$50 per night</h6>
+                                <h6 class="mb-4">$<?php echo $room['price'] ?> per night</h6>
                                 <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Book now</a>
                                 <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More details</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card mb-4 shadow border-0" >
-                        <div class="row g-0 p-3 align-items-center">
-                            <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
-                                <img src="images/rooms/1.jpg" class="img-fluid rounded" alt="room">
-                            </div>
-
-                            <div class="col-md-5 px-lg-3 px-md-3 px-0">
-                                <h5 class="mb-3">Simple Room name</h5>
-                                <div class="features mb-3">
-                                    <h6 class="mb-1">Features</h6>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        2 rooms
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        1 Batroom
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        2 Balcony
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        2 sofa
-                                    </span>
-                                </div>
-                                <div class="facilities mb-3">
-                                    <h6 class="mb-1">Facilities</h6>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        Wifi
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        Television
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        AC
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        Room heater
-                                    </span>
-                                </div>
-                                <div class="guests">
-                                    <h6 class="mb-1">Guests</h6>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        4 Children
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        5 Adults
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-md-2 text-center mt-lg-0 mt-md-0 mt-4">
-                                <h6 class="mb-4">$50 per night</h6>
-                                <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Book now</a>
-                                <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 shadow border-0" >
-                        <div class="row g-0 p-3 align-items-center">
-                            <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
-                                <img src="images/rooms/1.jpg" class="img-fluid rounded" alt="room">
-                            </div>
-                            <div class="col-md-5 px-lg-3 px-md-3 px-0">
-                                <h5 class="mb-3">Simple Room name</h5>
-                                <div class="features mb-3">
-                                    <h6 class="mb-1">Features</h6>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        2 rooms
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        1 Batroom
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        2 Balcony
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        2 sofa
-                                    </span>
-                                </div>
-                                <div class="facilities mb-3">
-                                    <h6 class="mb-1">Facilities</h6>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        Wifi
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        Television
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        AC
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        Room heater
-                                    </span>
-                                </div>
-                                <div class="guests">
-                                    <h6 class="mb-1">Guests</h6>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        4 Children
-                                    </span>
-                                    <span class="badge rounded-pill text-bg-light text-dark text-wrap">
-                                        5 Adults
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-md-2 text-center mt-lg-0 mt-md-0 mt-4">
-                                <h6 class="mb-4">$50 per night</h6>
-                                <a href="#" class="btn btn-sm w-100 text-white custom-bg shadow-none mb-2">Book now</a>
-                                <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More details</a>
-                            </div>
-                        </div>
-                    </div>
+                   
 
                 </div>
             </div>
